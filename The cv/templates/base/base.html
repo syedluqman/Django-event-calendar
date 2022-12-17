@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta name="description" content="Book a Meeting" />
+        <!-- Twitter meta-->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:site" content="@syedluqman" />
+        <meta property="twitter:creator" content="@syedluqman" />
+        <!-- Open Graph Meta-->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Syed Luqman" />
+        <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme" />
+        <meta property="og:url" content="https://syedluqman.github.io/" />
+        <meta property="og:image" content="https://pbs.twimg.com/profile_images/1396084170728910848/pgb690Sk_400x400.jpg" />
+        <meta property="og:description" content="Event Dashboard" />
+        <title>{% block title %}{% endblock title  %}</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Main CSS-->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+        <!-- Font-icon css-->
+        <!-- Font-icon css-->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        
+        {% block extracss %}
+        {% endblock extracss %}
+    </head>
+    <body class="app sidebar-mini">
+        <!-- Navbar-->
+        <header class="app-header">
+            <a class="app-header__logo" href="#">Booking Schedule</a>
+            <!-- Sidebar toggle button-->
+            <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+            <!-- Navbar Right Menu-->
+            <ul class="app-nav">
+                <li class="app-search">
+                    <input class="app-search__input" type="search" placeholder="Search" />
+                    <button class="app-search__button"><i class="fa fa-search"></i></button>
+                </li>
+                <!--Notification Menu-->
+                <li class="dropdown">
+                    <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
+                    <ul class="app-notification dropdown-menu dropdown-menu-right">
+                        <li class="app-notification__title">You have 4 new notifications.</li>
+                        <div class="app-notification__content">
+                            <li>
+                                <a class="app-notification__item" href="javascript:;">
+                                    <span class="app-notification__icon">
+                                        <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span>
+                                    </span>
+                                    <div>
+                                        <p class="app-notification__message">Luqman sent you a mail</p>
+                                        <p class="app-notification__meta">2 min ago</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="app-notification__item" href="javascript:;">
+                                    <span class="app-notification__icon">
+                                        <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span>
+                                    </span>
+                                    <div>
+                                        <p class="app-notification__message">Mail server not working</p>
+                                        <p class="app-notification__meta">5 min ago</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="app-notification__item" href="javascript:;">
+                                    <span class="app-notification__icon">
+                                        <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span>
+                                    </span>
+                                    <div>
+                                        <p class="app-notification__message">Auto authentication complete</p>
+                                        <p class="app-notification__meta">5 min ago</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <div class="app-notification__content">
+                                <li>
+                                    <a class="app-notification__item" href="javascript:;">
+                                        <span class="app-notification__icon">
+                                            <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span>
+                                        </span>
+                                        <div>
+                                            <p class="app-notification__message">Luqman sent you a mail</p>
+                                            <p class="app-notification__meta">6 min ago</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="app-notification__item" href="javascript:;">
+                                        <span class="app-notification__icon">
+                                            <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span>
+                                        </span>
+                                        <div>
+                                            <p class="app-notification__message">Mail server not working</p>
+                                            <p class="app-notification__meta">6 min ago</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="app-notification__item" href="javascript:;">
+                                        <span class="app-notification__icon">
+                                            <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span>
+                                        </span>
+                                        <div>
+                                            <p class="app-notification__message">unsuccessful email correspondence</p>
+                                            <p class="app-notification__meta">5 mins ago</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+                        <li class="app-notification__footer"><a href="#">See all notifications.</a></li>
+                    </ul>
+                </li>
+                <!-- User Menu-->
+                <li class="dropdown">
+                    <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
+                    <ul class="dropdown-menu settings-menu dropdown-menu-right">
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="fa fa-cog fa-lg"></i> Settings</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="fa fa-user fa-lg"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{% url 'accounts:signout' %}"><i class="fa fa-sign-out fa-lg"></i> Sign Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <!-- Sidebar menu-->
+        <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+        <aside class="app-sidebar">
+            <div class="app-sidebar__user">
+                <img class="app-sidebar__user-avatar" src="data:image/jpeg;base64,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" alt="User Image" height="50px" width="50px"/>
+                <div>
+                    
+                    <p class="app-sidebar__user-name" ><a href="{% url 'profile' %}">Syed Luqman</a> </p>
+                    <p class="app-sidebar__user-designation">Data Scientist</p>
+                </div>
+            </div>
+            <ul class="app-menu">
+                <li>
+                    <a class="app-menu__item active" href="{% url 'dashboard' %}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a>
+                </li>
+                <li>
+                    <a class="app-menu__item" href="{% url 'calendarapp:calendar' %}"><i class="app-menu__icon fa fa-calendar"></i><span class="app-menu__label">Calendar</span></a>
+                </li>
+                <li class="treeview">
+                    <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Events</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li>
+                            <a class="treeview-item" href="{% url 'calendarapp:running_events' %}"><i class="icon fa fa-circle-o"></i> Running</a>
+                        </li>
+                        <li>
+                            <a class="treeview-item" href="{% url 'calendarapp:running_events' %}"><i class="icon fa fa-circle-o"></i> Upcoming</a>
+                        </li>
+                        <li>
+                            <a class="treeview-item" href="{% url 'calendarapp:all_events' %}"><i class="icon fa fa-circle-o"></i> All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="app-menu__item" href="#"><i class="app-menu__icon fa fa-money"></i><span class="app-menu__label">Docs</span></a>
+                </li>
+                <li>
+                    <a class="app-menu__item" href="{% url 'profile' %}"><i class="app-menu__icon fa fa-user"></i><span class="app-menu__label">Profile</span></a>
+                </li>
+            </ul>
+        </aside>
+        <main class="app-content">
+            <div class="app-title">
+                {% block breadcrumb %}
+                {% endblock breadcrumb %}
+            </div>
+            {% block content %}
+            {% endblock content %}
+        </main>
+        <!-- Essential javascripts for application to work-->
+        {% include 'base/js.html' %}
+        {% block extrascripts %}
+        {% endblock extrascripts %}
+    </body>
+</html>
